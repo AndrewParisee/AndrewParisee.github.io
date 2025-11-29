@@ -1,0 +1,246 @@
+:root {
+    --mobile-bg: linear-gradient(to bottom, #238ffa, #474542);
+    --tablet-bg: linear-gradient(to bottom, #139143, #474542);
+    --desktop-bg: linear-gradient(to bottom, #d83b26, #474542);
+    --section-bg: lightgrey;
+    --mobile-color: #238ffa;
+    --tablet-color: #139143;
+    --desktop-color: #d83b26;
+    --text-color: rgb(0, 0, 0);
+    --border-color: rgb(0, 0, 0);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --link-color: rgb(0, 26, 255);
+    --footer-color: rgb(255, 255, 255);
+    --herobutton-color: darkgray;
+}
+
+/* Animation Styles */
+.logo-imageAnimation:hover {
+    animation: heartBeat;
+    animation-duration: 2s;
+}
+.titleAnimation:hover {
+    animation: bounce;
+    animation-duration: 2s;
+}
+.hero-imageAnimation:hover  {
+    animation: flip;
+    animation-duration: 2s;
+}
+
+/* Background Styling */
+body {
+    background-image: var(--mobile-bg);
+    max-width: 75%;
+    margin: 2vh auto;
+}
+
+#logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+/* Logo Section Styling */
+#logo-image {
+    width: 40px;
+    height: 40px;
+}
+
+/* Menu Styling */
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 10px 16px;
+    background-color: var(--section-bg);
+    box-shadow: 5px 5px 10px 2px var(--shadow-color);
+}
+.menu-section a {
+    color: var(--mobile-color); 
+    padding: 10px 16px; 
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 13pt;
+    border-radius: 5px;
+    border: 2px solid var(--section-bg);
+}  
+.menu-section a:hover {
+    border-radius: 5px;
+    background-color: var(--mobile-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border: 2px solid var(--border-color);
+} 
+
+/* Hero Section Styling */
+#hero-section {
+    background-color:  var(--section-bg);
+    border:  1px solid var(--herobutton-color);
+    box-shadow: 5px 5px 10px 2px var(--shadow-color);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16pt;
+    text-align: center;
+}
+#hero-image {
+    height: 30vh;
+    max-width: 100%;
+    /* height: auto; */
+}
+#hero-button {
+    background-color: var(--herobutton-color);
+    border: 2px solid var(--border-color);
+    max-width: 30%;
+    margin: 0vw auto;
+    color: var(--text-color); 
+    border-radius: 5px;  
+    font-size: 16pt; 
+    cursor: pointer;
+    box-shadow: 5px 5px 10px 2px var(--shadow-color);
+}
+#hero-button:hover {
+    border-radius: 5px;
+    background-color: var(--mobile-color); 
+    color: var(--text-color); 
+    border: 2px solid var(--border-color);
+    font-weight: bold;
+}
+
+/* Skills, Contact, and Resume Section Styling */
+#skills-section, #contact-section, #resume-section {
+    background-color:  var(--section-bg);
+    border:  1px solid var(--herobutton-colo);
+    box-shadow: 5px 5px 10px 2px var(--shadow-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+#skills-header h2, #contact-header h2, #resume-header h2 {
+    text-decoration: underline;
+    margin: 0px;
+    margin-bottom: 10px;
+    color: var(--mobile-color)
+}
+.skills-item, .contact-item {
+    display: grid; 
+    grid-template-columns: 30px auto;
+    margin: 25px;
+    gap: 25px;
+}
+.skills-item {
+    max-width: 35%;
+}
+.skills-image, .contact-image {
+    margin-right: 10px;
+}
+.contact-name a, .resume-item a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 10pt;
+    font-family: sans-serif;
+    padding: 10px;
+}
+.contact-name a:hover, .resume-item a:hover {
+    font-weight: bold;
+}
+
+/* Font Styling */
+h1, h2, #hero-button {
+    font-family: Georgia, serif;
+    font-size: 12pt;
+}   
+p, .skills-name, .contact-name, .resume-name {
+    font-family: Lato, sans-serif;
+    font-size: 12pt;
+}
+#title h1 {
+    font-family: Lucida Handwriting;
+    font-size: 20pt;
+}
+footer p {
+    color: var(--footer-color);
+    font-size: 12pt;
+    text-align: center;
+}
+
+/* Media query for tablets and larger screens */
+    @media screen and (min-width: 768px) {
+    /* Tablet-specific styles */
+    body {
+        background-image: var(--tablet-bg);
+    }
+    .menu-section {
+        flex-direction: row;
+    }
+    .menu-section a {
+        color: var(--tablet-color); 
+        font-size: 14pt;
+    }  
+    .menu-section a:hover {
+        background-color: var(--tablet-color);
+    } 
+    #hero-button:hover {
+        background-color: var(--tablet-color); 
+    } 
+    #skills-header h2, #contact-header h2, #resume-header h2 {
+        color: var(--tablet-color)
+    }
+    h1, h2, li, #hero-button {
+        font-size: 14pt;
+    }   
+    p, .skills-name, .contact-name, .resume-name {
+        font-size: 14pt;
+    }
+    #title h1 {
+        font-size: 25pt;
+    }
+    .contact-name a, .resume-item a {
+        font-size: 14pt;
+    }
+    footer p {
+        font-size: 14pt;
+    }
+    }
+
+    /* Media query for desktop screens */
+    @media screen and (min-width: 1024px) {
+    /* Desktop-specific styles */
+    body {
+        background-image: var(--desktop-bg);
+    }
+    .menu-section a {
+        color: var(--desktop-color);
+        font-size: 16pt; 
+    }  
+    .menu-section a:hover {
+        background-color: var(--desktop-color);
+    }    
+    #hero-button:hover {
+        background-color: var(--desktop-color); 
+    }    
+    #skills-header h2, #contact-header h2, #resume-header h2 {
+        color: var(--desktop-color)
+    }
+    h1, h2, li, #hero-button {
+        font-size: 16pt;
+    }   
+    p, .skills-name, .contact-name, .resume-name {
+        font-size: 16pt;
+    }
+    #title h1 {
+        font-size: 30pt;
+    }
+    .contact-name a, .resume-item a {
+        font-size: 16pt;
+    }
+    footer p {
+        font-size: 16pt;
+    }
+    }
